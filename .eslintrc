@@ -1,0 +1,19 @@
+{
+  "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 8
+  },
+  "env": {
+      "es6": true,
+      "node": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+      "max-len": [2, 120, 8],
+      "no-console": 0,
+      "no-unused-vars": 0,
+      "no-shadow": 0,
+      "import/no-unresolved": 0,
+      "function-paren-newline": [0, "multiline"]
+  }
+}

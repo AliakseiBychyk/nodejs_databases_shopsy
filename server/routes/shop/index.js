@@ -5,16 +5,16 @@ module.exports = (config) => {
   const router = express.Router();
   const log = config.logger;
 
-  router.get('/', async (req, res) => {
-    return res.render('shop', { });
+  router.get('/', async (req, res) =>
+    res.render('shop', { }),
     /*
     const items = await itemService.getAll();
     return res.render('shop', { items });
     */
-  });
+  );
 
-  router.get('/tobasket/:itemId', async (req, res, next) => {
-    return next('Not implemented');
+  router.get('/tobasket/:itemId', async (req, res, next) =>
+    next('Not implemented'),
 
     /*
     if (!res.locals.currentUser) {
@@ -41,7 +41,7 @@ module.exports = (config) => {
 
     return res.redirect('/shop');
     */
-  });
+  );
 
   return router;
 };

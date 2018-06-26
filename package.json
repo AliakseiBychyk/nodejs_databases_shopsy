@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/bin/www | bunyan"
+    "start": "node ./server/bin/www | bunyan",
+    "lint": "eslint ./**/*.js"
   },
   "author": "Aliaksei Bychyk",
   "license": "ISC",

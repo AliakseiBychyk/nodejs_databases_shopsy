@@ -4,8 +4,8 @@ module.exports = (config) => {
   const router = express.Router();
   const log = config.logger;
 
-  router.get('/', async (req, res) => {
-    return res.render('admin/orders', {});
+  router.get('/', async (req, res) =>
+    res.render('admin/orders', {}),
 
     /*
     try {
@@ -23,10 +23,10 @@ module.exports = (config) => {
       return next(err);
     }
     */
-  });
+  );
 
-  router.get('/setshipped/:orderId', async (req, res, next) => {
-    return next('Not Implemented');
+  router.get('/setshipped/:orderId', async (req, res, next) =>
+    next('Not Implemented'),
 
     /*
     try {
@@ -45,7 +45,7 @@ module.exports = (config) => {
       return res.redirect('/admin/orders');
     }
     */
-  });
+  );
 
   return router;
 };

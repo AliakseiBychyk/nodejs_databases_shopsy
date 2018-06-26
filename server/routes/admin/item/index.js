@@ -4,8 +4,8 @@ module.exports = (config) => {
   const router = express.Router();
   const log = config.logger;
 
-  router.get('/:itemId?', async (req, res) => {
-    return res.render('admin/item', {});
+  router.get('/:itemId?', async (req, res) =>
+    res.render('admin/item', {}),
 
     /*
     try {
@@ -25,11 +25,11 @@ module.exports = (config) => {
       return next(err);
     }
     */
-  });
+  );
 
   // Save or update item
-  router.post('/', async (req, res, next) => {
-    return next('Not implemented');
+  router.post('/', async (req, res, next) =>
+    next('Not implemented'),
 
     /*
 
@@ -73,11 +73,11 @@ module.exports = (config) => {
       return res.redirect('/admin/item');
     }
     */
-  });
+  );
 
   // Delete item
-  router.get('/delete/:itemId', async (req, res, next) => {
-    return next('Not implemented');
+  router.get('/delete/:itemId', async (req, res, next) =>
+    next('Not implemented'),
 
     /*
     try {
@@ -101,6 +101,6 @@ module.exports = (config) => {
     });
     return res.redirect('/admin/item');
     */
-  });
+  );
   return router;
 };

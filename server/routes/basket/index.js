@@ -4,8 +4,8 @@ module.exports = (config) => {
   const router = express.Router();
   const log = config.logger;
 
-  router.get('/', async (req, res) => {
-    return res.render('basket', {});
+  router.get('/', async (req, res) =>
+    res.render('basket', {}),
 
     /*
     const basketItems = await basket.getAll(res.locals.currentUser.id);
@@ -19,10 +19,10 @@ module.exports = (config) => {
     }
     return res.render('basket', { items });
     */
-  });
+  );
 
-  router.get('/remove/:itemId', async (req, res, next) => {
-    return next('Not implemented');
+  router.get('/remove/:itemId', async (req, res, next) =>
+    next('Not implemented'),
 
     /*
     if (!res.locals.currentUser) {
@@ -50,10 +50,10 @@ module.exports = (config) => {
 
     return res.redirect('/basket');
     */
-  });
+  );
 
-  router.get('/buy', async (req, res, next) => {
-    return next('Not implemented');
+  router.get('/buy', async (req, res, next) =>
+    next('Not implemented'),
 
     /*
     try {
@@ -101,7 +101,7 @@ module.exports = (config) => {
       return res.redirect('/basket');
     }
     */
-  });
+  );
 
   return router;
 };
